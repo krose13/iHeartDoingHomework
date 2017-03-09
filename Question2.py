@@ -1,8 +1,11 @@
 import pandas as pd
 from scipy.stats import ks_2samp
 
-df1 = pd.read_table("/home/krose/iHeart/users.tsv")
-df2 = pd.read_table("/home/krose/iHeart/listens.tsv")
+thisdir = "/home/krose/iHeart/"
+
+#load the tables
+df1 = pd.read_table(thisdir + "users.tsv")
+df2 = pd.read_table(thisdir + "listens.tsv")
 
 df3 = pd.merge(df1, df2, on='profile_id', how='left')
 
