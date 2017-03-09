@@ -75,13 +75,13 @@ plt.close()
 #total listens by age and genre
 b1 = plt.boxplot(total_ages.values(), showfliers=False)
 plt.ylabel('Age of all listeners by genre')
-plt.xticks(range(len(total_ages)), total_ages.keys(), rotation=25)
+plt.xticks(range(len(total_ages)+1), [""] + total_ages.keys(), rotation=25)
 plt.savefig(thisdir+"age_of_total_by_genre.pdf")
 
 plt.close()
 #unique listens by age and genre
 b2 = plt.boxplot(unique_ages.values(), showfliers=False)
 plt.ylabel('Age of unique listeners by genre')
-plt.xticks(range(len(unique_ages)), unique_ages.keys(), rotation=25)
+plt.xticks(range(len(unique_ages)+1), [""] + unique_ages.keys(), rotation=25)
 plt.savefig(thisdir+"age_of_unique_by_genre.pdf")
 
